@@ -147,6 +147,20 @@ A continuación, controle el comando en el código fuente del bot mediante la cl
         }
    ```
 
+## Tarea 5: Registro del nuevo comando
+
+Cada nuevo comando debe configurarse en `ConversationBot`, que impulsa el flujo conversacional de la plantilla de bot de comandos.
+
+1. Vaya al archivo `src/internal/initialize.ts`.
+2. Agregue la siguiente instrucción import en la línea 2:
+
+    `import { ResetPasswordCommandHandler } from "../resetPasswordCommandHandler";`
+3. En la línea 20, actualice la matriz `commands` de la propiedad `command` para incluir una instrucción para inicializar el nuevo controlador: el objeto del comando `new ResetPasswordCommandHandler().  The updated ` debe ser el siguiente:
+
+   ```json
+   command: {    enabled: true,    commands: [new HelloWorldCommandHandler(), new ResetPasswordCommandHandler()],  },
+    ```
+
 ## Comprobar el trabajo
 
 Ejecute la aplicación localmente para probar la funcionalidad:
