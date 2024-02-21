@@ -8,15 +8,15 @@ En este ejercicio, implementará el código fuente en los recursos de Azure apro
 
 2. En el panel Kit de herramientas de Teams, en **Ciclo de vida**, seleccione **Implementar**.
 
-    :::image type="content" source="../media/deploy-button.png" alt-text="Captura de pantalla del vínculo para implementar en la nube resaltado.":::
+    ![Captura de pantalla del vínculo para implementar en la nube resaltado.](../../media/deploy-button.png)
 
 3. En el cuadro de diálogo de confirmación de la implementación, seleccione **Implementar**.
 
-    :::image type="content" source="../media/deploy-confirm.png" alt-text="Captura de pantalla de un cuadro de diálogo para confirmar la implementación":::.
+    ![Captura de pantalla de un cuadro de diálogo para confirmar la implementación.](../../media/deploy-confirm.png).
 
 4. Compruebe si la implementación se ha realizado correctamente en el editor de Visual Studio Code.
 
-    :::image type="content" source="../media/deploy-success.png" alt-text="Captura de pantalla en la que se muestra que la implementación ha sido correcta.":::
+    ![Captura de pantalla en la que se muestra que la implementación ha sido correcta.](../../media/deploy-success.png)
 
 El código de la aplicación de pestañas de Teams se hospeda correctamente en Azure Storage y está listo para publicarse en Teams.
 
