@@ -2,7 +2,7 @@
 
 En este ejercicio, primero creará y aprovisionará una aplicación de pestaña de Teams mediante el Kit de herramientas de Teams para Visual Studio Code. En un ejercicio posterior, configurará la aplicación para hospedarla en Azure.
 
-**Nota**:  Los ejercicios de este módulo de entrenamiento usan el Kit de herramientas de Teams v5.0.0. En los pasos siguientes se supone que está instalada la extensión del Kit de herramientas de Teams.
+**Nota**:  Los ejercicios de este módulo de entrenamiento usan el Kit de herramientas de Teams v5.6.0. En los pasos siguientes se supone que está instalada la extensión del Kit de herramientas de Teams.
 
 ## Tarea 1: Creación de una aplicación de pestaña
 
