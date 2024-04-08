@@ -10,7 +10,7 @@ En este ejercicio, ejecutará la aplicación Teams localmente.
 
 2. En el cuadro de diálogo emergente, seleccione **Iniciar sesión**. Se le lleva a un explorador para iniciar sesión con las **credenciales de la cuenta de Microsoft 365**.  Escriba las credenciales de administrador.
 
-3. Cuando haya iniciado sesión correctamente, cierre el explorador y vuelva a Visual Studio Code. Aparece un mensaje *Instalación de prueba habilitada* para la instalación de prueba en su cuenta en el Kit de herramientas de Teams para indicar que el inquilino está configurado correctamente.
+3. Cuando haya iniciado sesión correctamente, cierre el explorador y vuelva a Visual Studio Code. Aparece un mensaje **Carga de aplicación personalizada habilitada** en su cuenta en el Kit de herramientas de Teams para indicar que el inquilino está configurado correctamente.
 
     ![Captura de pantalla de la nota habilitada para la instalación de prueba en el Kit de herramientas de Teams.](../../media/sideload-enabled.png)
 
@@ -24,7 +24,7 @@ Vamos a ejecutar el proyecto y comprobar cómo se verá en Microsoft Teams.
 4. A continuación, el Kit de herramientas de Teams abre Microsoft Teams en el explorador seleccionado.
 5. Inicie sesión con la misma cuenta de **Microsoft 365** que usó para iniciar sesión en el Kit de herramientas de Teams.
 6. A continuación, Teams muestra una opción para instalar la aplicación. Seleccione **Agregar** para obtener una vista previa de la aplicación.
-7. Al obtener una vista previa, el nombre de la aplicación tiene el sufijo *local-debug*. El sufijo indica que la aplicación se está ejecutando localmente y no se ha implementado.
+7. Cuando se obtiene una vista previa, el nombre de la aplicación lleva al final *local*. El sufijo indica que la aplicación se está ejecutando localmente y no se ha implementado.
 
     ![Captura de pantalla del cuadro de diálogo para instalar una aplicación de Teams.](../../media/add-teams-app.png)
 
