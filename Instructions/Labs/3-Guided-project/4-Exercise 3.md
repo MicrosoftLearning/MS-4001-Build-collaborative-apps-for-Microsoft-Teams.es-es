@@ -91,6 +91,6 @@ Ejecute la aplicación en modo de depuración para probar la funcionalidad.
    - En Visual Studio Code, vaya al menú **Ejecutar y depurar**.  Seleccione **Depurar en Teams** con la opción del explorador que quiera y, después, seleccione el botón **Iniciar depuración**.
    - En la sección **ENTORNO** del Kit de herramientas de Teams, abra la *carpeta local* y, a continuación, seleccione el explorador que prefiera.
 
-3. Una vez que Visual Studio Code realice algunas comprobaciones y con las acciones todavía visibles en la pestaña **Consola**, se abrirá una nueva ventana del explorador. En el cuadro de diálogo **UserInfoApp**, seleccione el botón **Agregar** para instalar la aplicación en Teams y obtener una vista previa.
+3. Una vez que Visual Studio Code realice algunas comprobaciones y con las acciones todavía visibles en la pestaña **Consola**, se abrirá una nueva ventana del explorador. En el cuadro de diálogo **UserInfoApplocal**, selecciona el botón **Agregar** para instalar la aplicación en Teams y obtener una vista previa.
 
 La aplicación ahora se puede ver en la barra lateral. La aplicación está preconfigurada con dos pestañas: **Pestaña personal** y **Acerca de**. Compruebe que el código de configuración regional se muestra en la pestaña.

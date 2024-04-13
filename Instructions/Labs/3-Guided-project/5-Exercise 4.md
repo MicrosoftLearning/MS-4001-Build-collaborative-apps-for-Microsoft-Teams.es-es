@@ -31,13 +31,15 @@ Debe realizar las siguientes tareas para finalizar el ejercicio:
 
 Use la plantilla Bot de comandos para crear un bot:
 
-1. En Visual Studio Code, vaya a **Kit de herramientas de Teams** en la barra lateral.
-2. En el kit de herramientas de Teams, en el menú **Desarrollo**, seleccione **Crear una nueva aplicación**.
-3. En el menú **Nuevo proyecto**, seleccione **Bot** y después **Comando de chat** para desarrollar un bot de comandos.
-4. En Lenguaje de programación, seleccione **TypeScript**.
-5. Para **carpeta del área de trabajo** seleccione o cree una carpeta para almacenar los archivos de su proyecto en su equipo.
-6. En **Nombre de la aplicación**, escriba **SupportCommandBot** y presione **Entrar**.  El kit de herramientas de Teams crea su proyecto de bots y aplica scaffolding.
-7. Revise los directorios y archivos del proyecto mediante el Explorador de Visual Studio Code para familiarizarse con el código fuente.
+1. Abra Visual Studio Code.
+1. En la barra lateral, seleccione el icono de **Microsoft Teams** para abrir el panel **KIT DE HERRAMIENTAS DE TEAMS**.
+1. Haga clic en el botón **Crear aplicación**.
+1. En el menú **Nuevo proyecto**, seleccione **Bot** y después **Comando de chat** para desarrollar un bot de comandos.
+1. En Lenguaje de programación, seleccione **TypeScript**.
+1. Para **carpeta del área de trabajo** seleccione o cree una carpeta para almacenar los archivos de su proyecto en su equipo.
+1. En **Nombre de la aplicación**, escriba **SupportCommandBot** y presione **Entrar**. El Kit de herramientas de Teams aplicará scaffolding a una nueva aplicación y abrirá la carpeta del proyecto en Visual Studio Code.
+1. Puede recibir un mensaje de Visual Studio Code que le pregunte si confía en los autores de los archivos de esta carpeta. Seleccione el botón **Sí, confío en los autores** para continuar.
+1. Revise los directorios y archivos del proyecto mediante el Explorador de Visual Studio Code para familiarizarse con el código fuente.
 
 ## Tarea 2: Configuración del manifiesto
 
@@ -161,11 +163,108 @@ Cada nuevo comando debe configurarse en `ConversationBot`, que impulsa el flujo 
    command: {    enabled: true,    commands: [new HelloWorldCommandHandler(), new ResetPasswordCommandHandler()],  },
     ```
 
+## Tarea 6: Cambiar a ngrok desde un túnel dev (opcional)
+
+Si su entorno de desarrollo no admite el túnel dev del kit de herramientas de Teams, puede reemplazar dicho túnel por ngrok.
+
+1. Siga estos pasos para instalar ngrok:
+   1. Vaya al [sitio web de ngrok](https://ngrok.com/) y regístrese para obtener una cuenta.
+   1. Descargue el archivo ejecutable ngrok para su sistema operativo.
+   1. Extraiga el archivo descargado en un directorio de su elección.
+   1. En un entorno de Windows, agregue el directorio donde se encuentra `ngrok.exe` a la variable de entorno PATH del sistema. 
+      ```powershell
+      setx PATH "$Env:path;<ngrok_full_path>"
+      ```
+      _En un entorno de PowerShell, reemplace `<ngrok_full_path>` por la ruta de acceso donde se encuentra `ngrok.exe`._
+      > Para aplicar este cambio de variable de entorno, debe reiniciar los terminales y **Visual Studio Code** para el proyecto actual.
+
+   1. Abra un terminal o símbolo del sistema y ejecute el siguiente comando para autenticar la cuenta de ngrok:
+      ```shell
+      ngrok config add-authtoken <your_auth_token>
+      ```
+      _Reemplace `<your_auth_token>` por el token de autenticación que se proporciona en el sitio web de ngrok._
+   1. Para iniciar un túnel en el puerto 3978, ejecute el siguiente comando:
+      ```shell
+      ngrok http 3978
+      ```
+   1. Ngrok generará una dirección URL de reenvío que puede usar para acceder a la aplicación desde Internet.
+      ```shell
+      Forwarding      http://<random_string>.ngrok-free.app -> http://localhost:3978
+      ```
+   1. Haga clic en `Ctrl + C` para desconectar el túnel de ngrok.
+1. Vaya a la carpeta `.vscode` y abra el archivo `task.json`. Actualice la tarea `Start local tunnel`:
+   ```json
+    {
+        "label": "Start local tunnel",
+        "type": "shell",
+        "command": "ngrok http 3978 --log=stdout --log-format=logfmt",
+        "isBackground": true,
+        "problemMatcher": {
+            "pattern": [
+                {
+                    "regexp": "^.*$",
+                    "file": 0,
+                    "location": 1,
+                    "message": 2
+                }
+            ],
+            "background": {
+                "activeOnStart": true,
+                "beginsPattern": "starting web service",
+                "endsPattern": "started tunnel|failed to reconnect session"
+            }
+        }
+    }
+   ```
+1. Vaya al archivo `teamsapp.local.yml` en la carpeta raíz. Agregue la siguiente acción en el primer paso del ciclo de vida de aprovisionamiento.
+   - Windows
+     ```yml
+     provision:
+       - uses: script
+         with:
+           shell: powershell
+           run: |
+                for ($i = 1; $i -le 10; $i++) {
+                    $endpoint = (Invoke-WebRequest -Uri "http://localhost:4040/api/tunnels" | Select-String -Pattern 'https://[a-zA-Z0-9 -\.]*\.ngrok-free\.app').Matches.Value
+                    if ($endpoint) {
+                        break
+                    }
+                    sleep 10
+                }
+                if (-not $endpoint) {
+                    echo "ERROR: Failed to find tunnel endpoint after 10 attempts."
+                    exit 1
+                } else {
+                    echo "::set-teamsfx-env BOT_ENDPOINT=$endpoint"
+                    echo "::set-teamsfx-env BOT_DOMAIN=$($endpoint.Substring(8))"
+                }
+     ```
+   - Linux y macOS
+     ```yml
+     provision:
+        - uses: script
+            with:
+            run: |
+                for i in {1..10}; do
+                    endpoint=$(curl -s localhost:4040/api/tunnels | grep -o 'https://[a-zA-Z0-9 -\.]*\.ngrok-free\.app')
+                    if [ -n "$endpoint" ]; then
+                        break
+                    fi
+                    sleep 10
+                done
+                if [ -z "$endpoint" ]; then
+                    echo "ERROR: Failed to find tunnel endpoint after 10 attempts."
+                    exit 1
+                else
+                    echo "::set-teamsfx-env BOT_ENDPOINT=$endpoint"
+                    echo "::set-teamsfx-env BOT_DOMAIN=${endpoint:8}"
+                fi
+     ```
 ## Comprobar el trabajo
 
 Ejecute la aplicación localmente para probar la funcionalidad:
 
-1. En el menú **LIFECYCLE**, seleccione **Vista previa de su aplicación de Teams** (o use la tecla `F5`) y después seleccione **Depurar en Teams ()** con su navegador preferido.  
+1. Abra el panel del **KIT DE HERRAMIENTAS DE TEAMS**. En el menú **DESARROLLO**, seleccione **Vista previa de su aplicación de Teams** (o use la clave `F5`) y, a continuación, seleccione **Depurar en Teams ()** con su explorador preferido.  
 2. El kit de herramientas de Teams aprovisionará y ejecutará la aplicación localmente en un explorador.
 3. En el cuadro de diálogo de instalación de la aplicación en el explorador, seleccione **Agregar** para instalar la aplicación de Teams.  Teams abre una conversación con el bot instalado.
 4. Escriba o seleccione el comando `resetPassword`.
