@@ -157,7 +157,7 @@ Cada nuevo comando debe configurarse en `ConversationBot`, que impulsa el flujo 
 2. Agregue la siguiente instrucción import en la línea 2:
 
     `import { ResetPasswordCommandHandler } from "../resetPasswordCommandHandler";`
-3. En la línea 20, actualice la matriz `commands` de la propiedad `command` para incluir una instrucción para inicializar el nuevo controlador: el objeto del comando `new ResetPasswordCommandHandler().  The updated ` debe ser el siguiente:
+3. En la línea 20, actualice la matriz `commands` de la propiedad `command` para incluir una instrucción para inicializar el nuevo controlador: `new ResetPasswordCommandHandler()`.  El objeto `command` actualizado debe ser el siguiente:
 
    ```json
    command: {    enabled: true,    commands: [new HelloWorldCommandHandler(), new ResetPasswordCommandHandler()],  },
