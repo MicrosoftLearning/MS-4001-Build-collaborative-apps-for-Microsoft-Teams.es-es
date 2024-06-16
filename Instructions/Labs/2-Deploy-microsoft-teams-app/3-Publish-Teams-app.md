@@ -37,7 +37,7 @@ Ahora que la aplicación se publica en la tienda de la organización, abra Micro
 
 ## Tarea 2: Instalación de la aplicación desde la tienda
 
-1. Abra el cliente de Microsoft Teams o inicie sesión en Microsoft Teams en línea ([teams.microsoft.com](teams.microsoft.com)) con sus **credenciales de inquilino de Microsoft 365**.
+1. Abra el cliente de Microsoft Teams o inicie sesión en Microsoft Teams en línea ([teams.microsoft.com](https://teams.microsoft.com/)) con sus **credenciales de inquilino de Microsoft 365**.
 2. En Microsoft Teams, vaya a **Aplicaciones** para ver la tienda de la organización. En **Compilado para la organización**, selecciona el icono **hello-tabdev**.
 
     a. ![Captura de pantalla de la tienda de la organización con la aplicación hello-tab resaltada.](../../media/org-store.png)

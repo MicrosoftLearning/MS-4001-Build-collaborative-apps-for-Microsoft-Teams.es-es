@@ -130,7 +130,6 @@ A continuación, controle el comando en el código fuente del bot mediante la cl
     import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
     import rawResetPasswordCard from "./adaptiveCards/resetPassword.json";
    ```
-
 3. Debajo de las instrucciones de importación, agregue el siguiente código para implementar el controlador de comandos, después guarde el archivo:
 
    ```typescript
@@ -260,6 +259,7 @@ Si su entorno de desarrollo no admite el túnel dev del kit de herramientas de T
                     echo "::set-teamsfx-env BOT_DOMAIN=${endpoint:8}"
                 fi
      ```
+     
 ## Comprobar el trabajo
 
 Ejecute la aplicación localmente para probar la funcionalidad:
