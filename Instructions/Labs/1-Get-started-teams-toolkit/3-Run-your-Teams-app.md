@@ -24,9 +24,12 @@ Vamos a ejecutar el proyecto y comprobar cómo se verá en Microsoft Teams.
 4. A continuación, el Kit de herramientas de Teams abre Microsoft Teams en el explorador seleccionado.
 5. Inicie sesión con la misma cuenta de **Microsoft 365** que usó para iniciar sesión en el Kit de herramientas de Teams.
 6. A continuación, Teams muestra una opción para instalar la aplicación. Seleccione **Agregar** para obtener una vista previa de la aplicación.
-7. Cuando se obtiene una vista previa, el nombre de la aplicación lleva al final *local*. El sufijo indica que la aplicación se está ejecutando localmente y no se ha implementado.
 
     ![Captura de pantalla del cuadro de diálogo para instalar una aplicación de Teams.](../../media/add-teams-app.png)
+
+7. Cuando se obtiene una vista previa, el nombre de la aplicación lleva al final *local*. El sufijo indica que la aplicación se está ejecutando localmente y no se ha implementado.
+
+    ![Captura de pantalla de la página web para la pestaña en local.](../../media/run-tab-local.png)
 
 8. Para obtener más información sobre la estructura del proyecto y cómo usar y personalizar la aplicación, abra el **archivo README.md** en la carpeta del proyecto.
 

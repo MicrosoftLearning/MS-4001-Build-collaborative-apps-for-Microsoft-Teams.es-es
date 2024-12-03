@@ -9,32 +9,32 @@ Necesita las siguientes herramientas para completar los laboratorios de este cur
 - Acceso de administrador a un inquilino de Microsoft 365.
 - Suscripción a Azure.
 - Visual Studio Code.
-- Extensión de Visual Studio Code del kit de herramientas de Teams:  Versión 5.2.0 o posteriores. (Lo instalará durante el laboratorio)
+- Extensión de Visual Studio Code de Teams Toolkit: versión 5.8.1 o posteriores. (Lo instalará durante el laboratorio)
 - Cliente de Microsoft Teams (para trabajo o escuela) o acceso a Microsoft Teams a través de un explorador web.
-- Node.js versión 16.14.2.
+- Node.js versión 18.20.4.
 
 ## Instalación de nvm-windows
 
 Usará esta herramienta para instalar Node.js y, opcionalmente, cambiar las versiones de Node según sea necesario para los proyectos.
 
-1. En un explorador web, vaya a [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases).
-2. Busque la versión más reciente y seleccione el archivo **nvm-setup.zip** que se va a descargar.  El archivo se descargará en el equipo.
-3. Abra la carpeta de archivos y **extraiga** el contenido de la carpeta ZIP en una carpeta del equipo.
-4. En la nueva carpeta, seleccione **nvm-setup.exe** para abrir el archivo de instalación.
-5. Siga las indicaciones del instalador para instalar la herramienta mediante las opciones predeterminadas.
+1. En un explorador web, ve a [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases).
+2. Busca la versión más reciente y selecciona el archivo **nvm-setup.zip** para descargarlo.  El archivo se descargará en el equipo. ![Captura de pantalla de la descarga de nvm-setup.zip](../../media/download-nvm-setup.png)
+3. Abre la carpeta de archivos y **extrae** el contenido de la carpeta ZIP en una carpeta del equipo.
+4. En la nueva carpeta, selecciona **nvm-setup.exe** para abrir el archivo de instalación.
+5. Sigue las indicaciones del instalador para instalar la herramienta mediante las opciones predeterminadas. ![Captura de pantalla de la configuración de instalación de nvm](../../media/install-nvm.png)
 6. Nvm para Windows se instalará en el equipo.
 
 ## Instalación de Node.js
 
-Instale Node.js versión 16.14.2, que es compatible con todas las soluciones de este curso.
+Instala Node.js versión 18.20.4, que es compatible con todas las soluciones de este curso.
 
-1. Abra la aplicación del **símbolo del sistema**.
-2. Escriba el comando `nvm install 16.14.2` para instalar Node.js.
+1. Abre la aplicación del **símbolo del sistema**.
+2. Escribe el comando `nvm install 18.20.4` para instalar Node.js.
 3. La salida nvm debe confirmar que la instalación se ha completado.
-4. Ejecute el comando `nvm use 16.14.2` para usar esta versión de Node.js.
-5. Ejecute el comando `node -v` para confirmar que tiene instalada la versión 16.14.2.
+4. Ejecuta el comando `nvm use 18.20.4` para usar esta versión de Node.js.
+5. Ejecuta el comando `node -v` para confirmar que tienes instalada la versión 18.20.4.
 
-Ya ha instalado y configurado Node.js versión 16.14.2
+Ya has instalado y configurado Node.js versión 18.20.4 ![Captura de pantalla de instalación de npm](../../media/nvm-install-npm.png)
 
 ## Suscripción de Azure
 

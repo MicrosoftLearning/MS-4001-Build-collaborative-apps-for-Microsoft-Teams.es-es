@@ -33,7 +33,7 @@ Tendrá que completar las siguientes tareas para completar el ejercicio:
 
 Aparecerá una notificación cuando se haya aplicado scaffolding correctamente en todas las carpetas y archivos y una nueva instancia de Visual Studio Code abrirá la nueva carpeta del proyecto.
 
-En el panel **EXPLORER**, la carpeta *src* contiene el código fuente de la aplicación. Los archivos fuera de la carpeta *src* están relacionados con el servidor, como el bot.
+En el panel **EXPLORER**, la carpeta *src* contiene el código fuente de la aplicación. Los archivos fuera de la carpeta *src* están relacionados con el servidor, como el bot. ![Captura de pantalla de archivos en Explorer](../../media/explorer-tab-file.png)
 
 ## Tarea 2: Actualice la aplicación para recuperar y mostrar la configuración regional del usuario
 
@@ -91,6 +91,6 @@ Ejecute la aplicación en modo de depuración para probar la funcionalidad.
    - En Visual Studio Code, vaya al menú **Ejecutar y depurar**.  Seleccione **Depurar en Teams** con la opción del explorador que quiera y, después, seleccione el botón **Iniciar depuración**.
    - En la sección **ENTORNO** del Kit de herramientas de Teams, abra la *carpeta local* y, a continuación, seleccione el explorador que prefiera.
 
-3. Una vez que Visual Studio Code realice algunas comprobaciones y con las acciones todavía visibles en la pestaña **Consola**, se abrirá una nueva ventana del explorador. En el cuadro de diálogo **UserInfoApplocal**, selecciona el botón **Agregar** para instalar la aplicación en Teams y obtener una vista previa.
+3. Una vez que Visual Studio Code realice algunas comprobaciones y con las acciones todavía visibles en la pestaña **Consola**, se abrirá una nueva ventana del explorador. En el cuadro de diálogo **UserInfoApplocal**, selecciona el botón **Agregar** para instalar la aplicación en Teams y obtener una vista previa. ![Captura de pantalla de la adición de UserInfoApplocal](../../media/add-userinfoapplocal.png)
 
-La aplicación ahora se puede ver en la barra lateral. La aplicación está preconfigurada con dos pestañas: **Pestaña personal** y **Acerca de**. Compruebe que el código de configuración regional se muestra en la pestaña.
+La aplicación ahora se puede ver en la barra lateral. La aplicación está preconfigurada con dos pestañas: **Pestaña personal** y **Acerca de**. Comprueba que el código de configuración regional se muestra en la pestaña. ![Captura de pantalla de UserInfoApplocal en la web](../../media/userinfoapplocal-run.png)

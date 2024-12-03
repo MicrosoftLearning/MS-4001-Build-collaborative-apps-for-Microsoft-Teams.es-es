@@ -2,7 +2,7 @@
 
 En este ejercicio, primero creará y aprovisionará una aplicación de pestaña de Teams mediante el Kit de herramientas de Teams para Visual Studio Code. En un ejercicio posterior, configurará la aplicación para hospedarla en Azure.
 
-**Nota**:  Los ejercicios de este módulo de entrenamiento usan el Kit de herramientas de Teams v5.6.0. En los pasos siguientes se supone que está instalada la extensión del Kit de herramientas de Teams.
+**Nota**: los ejercicios de este módulo de aprendizaje usan Teams Toolkit v5.8.0. En los pasos siguientes se supone que está instalada la extensión del Kit de herramientas de Teams.
 
 ## Tarea 1: Creación de una aplicación de pestaña
 
@@ -34,6 +34,8 @@ En este ejercicio, primero creará y aprovisionará una aplicación de pestaña 
 
 1. Cuando la aplicación se pruebe correctamente, deje de ejecutarla localmente.
 
+    ![Captura de pantalla de la aplicación de la pestaña depuración](../../media/launch-debug-tab-app.png)
+
 1. Para finalizar la sesión de depuración y dejar de ejecutar la aplicación, puede cerrar el explorador y seleccionar **Ejecutar > Detener depuración** o bien seleccionar **Mayús+F5**.
 
 ## Tarea 2: Inicio de sesión en Azure en el Kit de herramientas de Teams
@@ -49,6 +51,7 @@ Inicie sesión en Azure mediante la cuenta de la **suscripción de Azure**.
 1. En el cuadro de diálogo que aparece, seleccione **Iniciar sesión**.
 
     ![Captura de pantalla de un cuadro de diálogo para confirmar el inicio de sesión en Azure.](../../media/sign-into-azure-alert.png)
+    ![Captura de pantalla de sesión iniciada en Azure](../../media/signed-into-azure.png)
 
 ## Tarea 3: Aprovisionamiento de recursos
 
@@ -72,6 +75,7 @@ Ahora puede aprovisionar los recursos que necesita la aplicación de pestaña de
 
 1. Comienza el aprovisionamiento de todos los recursos que necesite para hospedar la aplicación de pestaña de Teams en Azure. El aprovisionamiento puede tardar unos minutos.
 
+    ![Captura de pantalla de aprovisionamiento correcto.](../../media/provision-success.png)
 Ahora ha aprovisionado correctamente todos los recursos que necesita para hospedar la aplicación de pestaña de Teams.
 
 A continuación, implementará el código fuente de la aplicación en estos recursos.

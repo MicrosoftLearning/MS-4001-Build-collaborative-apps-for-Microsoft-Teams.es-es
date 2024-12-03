@@ -10,7 +10,7 @@ En este ejercicio, instalará el Kit de herramientas de Teams para Visual Studio
 
 ![Captura de pantalla de la instalación del Kit de herramientas de Teams en Visual Studio Code.](../../media/teams-toolkit-install.png)
 
-**Nota**:  Los ejercicios de este módulo usan el Kit de herramientas de Teams v5.6.0. Tenga en cuenta que las versiones secundarias pueden variar.
+**Nota**: los ejercicios de este módulo usan Teams Toolkit v5.8.1. Tenga en cuenta que las versiones secundarias pueden variar.
 
 También puede instalar el Kit de herramientas de Teams desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
