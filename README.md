@@ -1,16 +1,18 @@
+**Este curso se retirará el **30/8/2024**. Una vez retirado el curso, se quitarán todos los repositorios de GitHub. Gracias.**
+
 # MS-4001: Compilación de aplicaciones colaborativas para Microsoft Teams
 
-**¿Es un MCT?** Consulte nuestra [guía de usuario de GitHub para MCT](https://microsoftlearning.github.io/MCT-User-Guide/).
+**¿Es un MCT?** Consulta nuestra [guía de usuario de GitHub para MCT](https://microsoftlearning.github.io/MCT-User-Guide/).
 
 ## ¿Qué vamos a hacer?
 
 - Para complementar este curso, necesitaremos hacer actualizaciones frecuentes del contenido del curso para mantenerlo actualizado con los servicios de Microsoft que se usan en el curso. Estamos publicando las instrucciones y los archivos para el laboratorio en GitHub para permitir contribuciones abiertas entre los autores del curso y los MCT (Microsoft Certified Trainer) para mantener el contenido actualizado con los cambios del producto.
 
-- Esperamos que esto brinde un sentido de colaboración a los laboratorios como nunca antes hemos visto: cuando un servicio de Microsoft, como Azure o Microsoft 365, cambie y lo descubras por primera vez en una entrega en vivo, puedes hacer una mejora directamente en el origen del laboratorio. Ayude a otros MCT.
+- Esperamos que esto brinde un sentido de colaboración a los laboratorios como nunca antes hemos visto: cuando un servicio de Microsoft, como Azure o Microsoft 365, cambie y lo descubras por primera vez en una entrega en vivo, puedes hacer una mejora directamente en el origen del laboratorio. Ayuda a otros MCT.
 
 ## ¿Cómo debo usar este repositorio?
 
-- Los materiales del instructor seguirán siendo su fuente principal para enseñar el contenido del curso.
+- Los materiales del instructor seguirán siendo tu fuente principal para enseñar el contenido del curso.
 
 - Estos archivos de GitHub están diseñados para usarse en los laboratorios del curso, que usan el entorno del laboratorio hospedado.
 
